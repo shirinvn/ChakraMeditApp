@@ -1,5 +1,6 @@
 package com.example.chakrameditapp
 
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -48,4 +49,5 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.replace(R.id.frame_layout,fragment)
         fragmentTransaction.commit()
     }
+
 }
