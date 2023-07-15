@@ -17,7 +17,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
-   private lateinit var binding: ActivityMainBinding
+    private lateinit var mediaPlayer: MediaPlayer
+
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -48,6 +50,21 @@ class MainActivity : AppCompatActivity() {
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.frame_layout,fragment)
         fragmentTransaction.commit()
+    }
+
+
+    override fun onStop() {
+        super.onStop()
+        mediaPlayer.release()
+    }
+
+    fun getMediaPlayer(): MediaPlayer {
+        if (!::mediaPlayer.isInitialized) {
+
+
+            mediaPlayer = MediaPlayer.create(this, R.raw.divar)
+        }
+        return mediaPlayer
     }
 
 }
