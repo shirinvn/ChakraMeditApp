@@ -35,40 +35,62 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         mediaPlayer = (activity as MainActivity).getMediaPlayer()
         binding.chakra1.setOnClickListener {
-           playSound()
+            playSong(1)
         }
         binding.chakra2.setOnClickListener {
-           playSound()
+            playSong(2)
         }
         binding.chakra3.setOnClickListener {
-           playSound()
+            playSong(3)
         }
         binding.chakra4.setOnClickListener {
-           playSound()
+            playSong(4)
         }
         binding.chakra5.setOnClickListener {
-           playSound()
+            playSong(5)
         }
         binding.chakra6.setOnClickListener {
-           playSound()
+            playSong(6)
         }
         binding.chakra7.setOnClickListener {
-           playSound()
+            playSong(7)
         }
 
 
     }
-    fun playSound() {
-        if (!isPlaying) {
-            mediaPlayer.start()
-            isPlaying = true
-        } else {
-            mediaPlayer.pause()
-            isPlaying = false
+
+//    fun playSound() {
+//        if (!isPlaying) {
+//            mediaPlayer.start()
+//            isPlaying = true
+//        } else {
+//            mediaPlayer.pause()
+//            isPlaying = false
+//        }
+//    }
+
+    fun playSong(songId: Int) {
+        val resourceId = getSongResourceId(songId)
+        if (resourceId != 0) {
+            mediaPlayer?.release()
+            mediaPlayer = MediaPlayer.create(requireContext(), resourceId)
+            mediaPlayer?.start()
         }
+
     }
 
-
+    fun getSongResourceId(songId: Int): Int {
+        return when (songId) {
+            1 -> com.example.chakrameditapp.R.raw.divar
+            2 -> com.example.chakrameditapp.R.raw.audio
+            3 -> com.example.chakrameditapp.R.raw.divar
+            4 -> com.example.chakrameditapp.R.raw.audio
+            5 -> com.example.chakrameditapp.R.raw.divar
+            6 -> com.example.chakrameditapp.R.raw.audio
+            7 -> com.example.chakrameditapp.R.raw.divar
+            else -> 0
+        }
+    }
 
 
 }

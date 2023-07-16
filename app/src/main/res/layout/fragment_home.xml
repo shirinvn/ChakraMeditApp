@@ -5,96 +5,107 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="110dp"
-
     android:layout_marginBottom="150dp"
     android:background="@drawable/medit"
-    tools:context=".HomeFragment">
+    tools:context=".HomeFragment"
+   >
 
 
     <ImageButton
         android:id="@+id/chakra1"
-        android:layout_width="54dp"
-        android:layout_height="54dp"
+        android:layout_width="61dp"
+        android:layout_height="65dp"
         android:layout_marginStart="181dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="176dp"
-        android:layout_marginBottom="17dp"
+        android:layout_marginBottom="7dp"
         android:background="@drawable/shape1"
+        android:onClick="@{() -> clickListener.onButtonClick(1)}"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chakra2" />
 
-
     <ImageButton
         android:id="@+id/chakra2"
-        android:layout_width="54dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="178dp"
-        android:layout_marginEnd="179dp"
+
+        android:layout_width="64dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="173dp"
+        android:layout_marginEnd="174dp"
         android:background="@drawable/shape1"
+        android:onClick="@{() -> clickListener.onButtonClick(2)}"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chakra3" />
 
     <ImageButton
         android:id="@+id/chakra3"
-        android:layout_width="54dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="178dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="179dp"
+
+        android:layout_width="63dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginEnd="173dp"
         android:background="@drawable/shape1"
+        android:onClick="@{() -> clickListener.onButtonClick(3)}"
+        app:layout_constraintBottom_toTopOf="@+id/chakra2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chakra4" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/chakra4"
-        android:layout_width="54dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="178dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="179dp"
+
+        android:layout_width="62dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginEnd="173dp"
         android:background="@drawable/shape1"
+        android:onClick="@{() -> clickListener.onButtonClick(4)}"
+        app:layout_constraintBottom_toTopOf="@+id/chakra3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chakra5" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/chakra5"
-        android:layout_width="54dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="181dp"
-        android:layout_marginEnd="176dp"
+
+        android:layout_width="64dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="175dp"
+        android:layout_marginEnd="172dp"
+        android:layout_marginBottom="2dp"
         android:background="@drawable/shape1"
+        android:onClick="@{() -> clickListener.onButtonClick(5)}"
+        app:layout_constraintBottom_toTopOf="@+id/chakra4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chakra6" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/chakra6"
-        android:layout_width="54dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="178dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="179dp"
+
+        android:layout_width="66dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="173dp"
+        android:layout_marginEnd="172dp"
         android:background="@drawable/shape1"
+        android:onClick="@{() -> clickListener.onButtonClick(6)}"
+        app:layout_constraintBottom_toTopOf="@+id/chakra5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chakra7" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/chakra7"
-        android:layout_width="54dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="178dp"
-        android:layout_marginTop="34dp"
-        android:layout_marginEnd="179dp"
+
+        android:layout_width="68dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="171dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="172dp"
         android:background="@drawable/shape1"
+        android:onClick="@{() -> clickListener.onButtonClick(7)}"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>
+
