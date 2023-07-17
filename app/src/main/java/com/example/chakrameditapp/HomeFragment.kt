@@ -71,10 +71,17 @@ class HomeFragment : Fragment() {
 
     fun playSong(songId: Int) {
         val resourceId = getSongResourceId(songId)
-        if (resourceId != 0) {
+        if (resourceId != 0 && !isPlaying) {
             mediaPlayer?.release()
             mediaPlayer = MediaPlayer.create(requireContext(), resourceId)
             mediaPlayer?.start()
+            isPlaying =true
+
+        }else{
+
+            mediaPlayer.stop()
+            isPlaying=false
+
         }
 
     }
